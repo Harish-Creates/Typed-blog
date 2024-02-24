@@ -1,13 +1,13 @@
-import { Card } from "@nextui-org/react";
 import "./App.css";
-import ThemeToggle from "./theme/ThemeToggle";
+
+import Footer from "./components/Footer";
+import Nav from "./components/Nav";
 
 function App() {
   return (
     <>
-      <Card className="h-[75vh] m-20 flex flex-row justify-center items-center">
-        <ThemeToggle />
-      </Card>
+      <Nav />
+      <Footer />
     </>
   );
 }
