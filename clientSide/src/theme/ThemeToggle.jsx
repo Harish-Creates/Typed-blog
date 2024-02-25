@@ -1,25 +1,27 @@
-import { Button } from "@nextui-org/react";
+import { Switch} from "@nextui-org/react";
 import { useTheme } from "next-themes";
+import { DarkMode, LightMode } from "../svg/Icons";
 
 const ThemeToggle = () => {
   const { theme, setTheme } = useTheme();
+  const handleThemeChange = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+
   return (
-    <div className="flex gap-4">
-      <Button
-        size="sm"
-        variant={theme === "light" ? "ghost" : "shadow"}
-        onClick={() => setTheme("light")}
-      >
-        Light
-      </Button>
-      <Button
-        size="sm"
-        variant={theme === "dark" ? "ghost" : "shadow"}
-        onClick={() => setTheme("dark")}
-      >
-        Dark
-      </Button>
-    </div>
+    <>
+      <Switch
+        isSelected={theme === "light"}
+        onValueChange={handleThemeChange}
+        thumbIcon={
+          theme === "light" ? (
+            <LightMode stroke={"#E2A42B"} h={15} w={15} fill={"#E2A42B"} />
+          ) : (
+            <DarkMode fill={"#39393A"} h={15} w={15} />
+          )
+        }
+      />
+    </>
   );
 };
 

@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <ThemeProvider
         attribute="class"
         defaultTheme="dark"
-        themes={["light", "dark", "customTheme"]}
+        themes={["light", "dark"]}
       >
         <App />
       </ThemeProvider>
