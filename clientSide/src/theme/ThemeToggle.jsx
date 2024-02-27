@@ -1,4 +1,4 @@
-import { Switch} from "@nextui-org/react";
+import { Switch } from "@nextui-org/react";
 import { useTheme } from "next-themes";
 import { DarkMode, LightMode } from "../svg/Icons";
 
